@@ -1,0 +1,19 @@
+{
+  "name": "buy-and-sell",
+  "version": "0.0.1",
+  "description": "SPA for e-commerce website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yapTim/buy-and-sell.git"
+  },
+  "author": "Robert Timothy Yap",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yapTim/buy-and-sell/issues"
+  },
+  "homepage": "https://github.com/yapTim/buy-and-sell#readme"
+}
