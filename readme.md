@@ -1,7 +1,4 @@
-# Buy and Sell E-Commerce Website
-Actual name TBD
+# Cherrry :cherries:
+An e-commerce website.
 
-### Tech Stack
-The follow website uses these technologies:  
-- Vue JS
-- Django with Django REST Framework
+Made with Vue.
