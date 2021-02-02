@@ -1,5 +1,8 @@
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
+import vuePlugin from 'rollup-plugin-vue';
+
+const port = 8080;
 
 export default {
     input: 'src/index.js',
@@ -8,7 +11,10 @@ export default {
         format: 'iife'
     },
     plugins: [
-        serve('dist'),
+        vuePlugin(),
+        serve({
+            port: port
+        }),
         livereload(),
-    ]
+    ],
 };
