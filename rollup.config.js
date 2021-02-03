@@ -1,6 +1,10 @@
-import serve from 'rollup-plugin-serve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import copy from 'rollup-plugin-copy';
 import livereload from 'rollup-plugin-livereload';
-import vuePlugin from 'rollup-plugin-vue';
+import serve from 'rollup-plugin-serve';
+import vue from 'rollup-plugin-vue';
+import common from 'rollup-plugin-commonjs'
 
 const port = 8080;
 
@@ -11,10 +15,20 @@ export default {
         format: 'iife'
     },
     plugins: [
-        vuePlugin(),
+        common(),
+        vue(),
+        nodeResolve(),
+        copy({
+            targets: [{ src: 'src/index.html', dest: 'dist/' }]
+        }),
         serve({
+            contentBase: 'dist/',
             port: port
         }),
         livereload(),
     ],
+    watch: {
+        include: 'src/**',
+        exclude: 'node_modules/**'
+    }
 };
