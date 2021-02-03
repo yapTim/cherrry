@@ -1,0 +1,39 @@
+{
+  "name": "cherrry",
+  "version": "1.0.0",
+  "description": "E-commerce Website",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "serve": "webpack serve --history-api-fallback"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yapTim/cherrry.git"
+  },
+  "author": "Robert Timothy Yap <yap.rtim@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yapTim/cherrry/issues"
+  },
+  "homepage": "https://github.com/yapTim/cherrry#readme",
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@vue/compiler-sfc": "^3.0.5",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.0.0",
+    "vue-loader": "^16.1.2",
+    "webpack": "^5.20.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0"
+  }
+}
