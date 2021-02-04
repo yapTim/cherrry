@@ -1,10 +1,19 @@
 <template>
-    <h1>{{ greeting }}</h1>
+    <div class="container is-max-widescreen">
+        <div></div>
+        <Navbar />
+    </div>
 </template>
 
 <script>
+import Navbar from './Navbar.vue';
+
 export default {
     name: 'App',
+
+    components: {
+        Navbar
+    },
 
     data() {
         return {
