@@ -21,6 +21,7 @@
                         v-for="item in cartItems"
                         :key="item.pk"
                         :item="item"
+                        @quantity-changed="quantityChangedHandler"
                     />
                 </div>
             </div>
@@ -98,6 +99,12 @@ export default {
             const discountRate = 1 - discount;
             const finalPrice = price * discountRate;
             return finalPrice * quantity
+        },
+
+        quantityChangedHandler({ itemId, quantity }) {
+            let item = this.cartItems.find(item => item.pk === itemId);
+            if (!item) return;
+            item.quantity = quantity;
         }
     }
 }

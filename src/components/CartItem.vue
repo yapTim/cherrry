@@ -52,6 +52,11 @@ export default {
             },
             immediate: true
         },
+
+        quantity(quantity) {
+            const payload = { itemId: this.item.pk, quantity };
+            this.$emit('quantity-changed', payload);
+        }
     },
 
     computed: {
