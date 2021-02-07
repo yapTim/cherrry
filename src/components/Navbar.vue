@@ -11,10 +11,16 @@
             </template>
             <template #end>
                 <b-navbar-item tag="div">
-                    <div class="buttons">
-                        <button class="button is-primary" @click="openSidebar = true">
-                            <strong>Cart</strong>
-                        </button>
+                    <div class="is-flex is-align-items-center" @click="openSidebar = true">
+                        <b-icon icon="cart-variant" size="is-medium"></b-icon>
+                        <h5><strong>Cart</strong></h5>
+                        <b-tag
+                            class="ml-1"
+                            rounded
+                            type="is-primary"
+                        >
+                            12
+                        </b-tag>
                     </div>
                 </b-navbar-item>
             </template>
