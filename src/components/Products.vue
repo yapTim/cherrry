@@ -2,14 +2,14 @@
     <div class="columns mt-2">
         <div class="column">
             <ProductCard
-                v-for="index in evenProducts"
+                v-for="(product, index) in evenProducts"
                 :key="index"
                 :idx="index"
             />
         </div>
         <div class="column">
             <ProductCard
-                v-for="index in oddProducts"
+                v-for="(product, index) in oddProducts"
                 :key="index"
                 :idx="index"
             />
@@ -29,7 +29,7 @@ export default {
 
     data() {
         return {
-            products: [1,2,3,4,5,6]
+            products: [{}, {}, {}, {}, {}, {}]
         };
     },
 
