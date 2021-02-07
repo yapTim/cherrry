@@ -10,12 +10,12 @@
                 </b-navbar-item>
             </template>
             <template #end>
-                <b-navbar-item tag="div">
+                <b-navbar-item tag="div" class="cart-button">
                     <div class="is-flex is-align-items-center" @click="openSidebar = true">
                         <b-icon icon="cart-variant" size="is-medium"></b-icon>
                         <h5><strong>Cart</strong></h5>
                         <b-tag
-                            class="ml-1"
+                            class="ml-1 cart-badge"
                             rounded
                             type="is-primary"
                         >
@@ -55,3 +55,14 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.cart-button {
+    display: flex !important;
+    justify-content: center;
+}
+
+.cart-badge {
+    font-weight: bold;
+}
+</style>
