@@ -18,7 +18,7 @@
         </div>
         <footer class="card-footer">
             <div class="card-footer-item">Buy Now</div>
-            <div class="card-footer-item">Add to Card</div>
+            <div class="card-footer-item">Add to Cart</div>
         </footer>
     </div>
 </template>
@@ -91,5 +91,6 @@ export default {
 
 .discount-tag {
     margin-left: auto;
+    font-weight: bold;
 }
 </style>
