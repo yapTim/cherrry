@@ -4,14 +4,14 @@
             <ProductCard
                 v-for="(product, index) in evenProducts"
                 :key="index"
-                :idx="index"
+                :product=product
             />
         </div>
         <div class="column">
             <ProductCard
                 v-for="(product, index) in oddProducts"
                 :key="index"
-                :idx="index"
+                :product=product
             />
         </div>
     </div>
@@ -29,7 +29,38 @@ export default {
 
     data() {
         return {
-            products: [{}, {}, {}, {}, {}, {}]
+            products: [
+                {
+                    name: 'Product Name',
+                    price: 100,
+                    discount: '0.5'
+                },
+                {
+                    name: 'Product Name',
+                    price: 100,
+                    discount: '0.5'
+                },
+                {
+                    name: 'Product Name',
+                    price: 100,
+                    discount: '0.5'
+                },
+                {
+                    name: 'Product Name',
+                    price: 100,
+                    discount: '0.5'
+                },
+                {
+                    name: 'Product Name',
+                    price: 100,
+                    discount: '0.5'
+                },
+                {
+                    name: 'Product Name',
+                    price: 100,
+                    discount: '0.5'
+                },
+            ]
         };
     },
 

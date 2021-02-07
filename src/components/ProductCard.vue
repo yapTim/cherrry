@@ -7,11 +7,13 @@
         </div>
         <div class="card-content is-flex">
             <div class="details">
-                <h3 class="title is-4">Product Title</h3>
-                <h5 class="subtitle">PHP <span class="discounted">100.00</span> 50.00</h5>
+                <h3 class="title is-4">{{ name }}</h3>
+                <h5 class="subtitle">
+                    PHP <span class="discounted">{{ formattedPrice }}</span> {{ discountedPrice }}
+                </h5>
             </div>
             <span class="tag discount-tag is-success">
-                50% Off!
+                {{ discountPercentage }}% Off!
             </span>
         </div>
         <footer class="card-footer">
@@ -26,8 +28,56 @@ export default {
     name: 'ProductCard',
 
     props: {
-        idx: {
-            type: Number,
+        product: {
+            type: Object,
+            required: true
+        }
+    },
+
+    data() {
+        return {
+            discount: '0',
+            name: '',
+            price: 0
+        };
+    },
+
+    computed: {
+        discountRate() {
+            return 1 - parseFloat(this.discount);
+        },
+
+        discountPercentage() {
+            return this.discountRate * 100;
+        },
+
+        discountedPrice() {
+            return this.formatMoney(this.price * this.discountRate);
+        },
+
+        formattedPrice() {
+            return this.formatMoney(this.price);
+        }
+    },
+
+    watch: {
+        product: {
+            handler(product) {
+                if (!product) return;
+
+                const { discount, name, price } = product;
+
+                this.discount = discount;
+                this.name = name;
+                this.price = price;
+            },
+            immediate: true
+        }
+    },
+
+    methods: {
+        formatMoney(amount) {
+            return amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         }
     }
 }
