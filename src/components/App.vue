@@ -1,11 +1,15 @@
 <template>
-    <div class="container is-max-widescreen">
+    <div class="container is-fluid">
         <Navbar />
-        <router-view></router-view>
+        <div class="container is-max-widescreen">
+            <router-view></router-view>
+        </div>
+        <Footer />
     </div>
 </template>
 
 <script>
+import Footer from './Footer.vue';
 import Navbar from './Navbar.vue';
 import Products from './Products.vue';
 
@@ -13,6 +17,7 @@ export default {
     name: 'App',
 
     components: {
+        Footer,
         Navbar,
         Products
     },
