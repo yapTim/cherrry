@@ -12,9 +12,14 @@
                     PHP <span class="discounted">{{ formattedPrice }}</span> {{ discountedPrice }}
                 </h5>
             </div>
-            <span class="tag discount-tag is-success">
-                {{ discountPercentage }}% Off!
-            </span>
+            <div class="extra-tags">
+                <span class="tag is-success">
+                    {{ discountPercentage }}% Off!
+                </span>
+                <span class="tag is-warning">
+                    Free Delivery!
+                </span>
+            </div>
         </div>
         <footer class="card-footer">
             <div class="card-footer-item">Buy Now</div>
@@ -89,7 +94,7 @@ export default {
     color: hsl(0, 0%, 76%);
 }
 
-.discount-tag {
+.extra-tags {
     margin-left: auto;
     font-weight: bold;
 }
